@@ -1,8 +1,10 @@
 import { Button, Col, Nav, Navbar } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+
 import logo from '../assets/logos/apple.svg'
 
 const MyNav = () => {
+  const location = useLocation()
   return (
     <>
       <Navbar
@@ -29,7 +31,12 @@ const MyNav = () => {
             <Link className="nav-link" to={'/'}>
               Home
             </Link>
-            <Link className="nav-link active" to={'/'}>
+            <Link
+              className={
+                location.pathname === '/' ? 'nav-link active' : 'nav-link'
+              }
+              to={'/'}
+            >
               Novità
             </Link>
             <Link className="nav-link" to={'/'}>

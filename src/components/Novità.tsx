@@ -19,7 +19,11 @@ import img8 from '../assets/images/2e.png'
 import img9 from '../assets/images/2f.png'
 import Buttons from './Buttons'
 
-const Novità = () => {
+interface NovitaProps {
+  search: string | null
+}
+
+const Novità = ({ search }: NovitaProps) => {
   const [music, setMusic] = useState<IData[]>([])
   const [error, setError] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(true)
@@ -37,30 +41,33 @@ const Novità = () => {
   ]
 
   const getSongs = async () => {
-    fetch(
-      `https://striveschool-api.herokuapp.com/api/deezer/search?q=Systemofadown`
-    )
-      .then((response) => {
-        if (response.ok) {
-          return response.json()
-        } else {
-          throw new Error('no ok')
-        }
-      })
-      .then((data: Response) => {
-        console.log(data)
-        setMusic(data.data)
-        setLoading(false)
-      })
-      .catch((error) => {
-        setError(true)
-        console.log(error)
-      })
+    if (search) {
+      fetch(
+        `https://striveschool-api.herokuapp.com/api/deezer/search?q=${search}`
+      )
+        .then((response) => {
+          if (response.ok) {
+            return response.json()
+          } else {
+            throw new Error('no ok')
+          }
+        })
+        .then((data: Response) => {
+          console.log(data)
+          setMusic(data.data)
+          setLoading(false)
+        })
+        .catch((error) => {
+          setError(true)
+          console.log(error)
+        })
+    }
   }
 
   useEffect(() => {
     getSongs()
-  }, [])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search])
 
   return (
     <Container fluid>
