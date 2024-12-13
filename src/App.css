@@ -3,7 +3,7 @@
 }
 
 .scroll {
-  max-height: 90vh !important;
+  max-height: 91vh !important;
   overflow: hidden;
 }
 
@@ -13,4 +13,53 @@
 
 .super-small {
   font-size: 0.5rem;
+}
+
+.sma {
+  height: 50px;
+  width: 50px;
+}
+
+.hov:hover {
+  color: #ff0019;
+}
+
+.red {
+  background-color: #d60017 !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='red' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.animation {
+  transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-out;
+  overflow: hidden;
+}
+.animation:hover {
+  transform: scale(1.05);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
 }

@@ -9,7 +9,7 @@ interface SongCardProps {
 const SongCard = (props: SongCardProps) => {
   return (
     <Card className="border-0" role="button">
-      <Card.Img className=" rounded-2" src={props.img} />
+      <Card.Img className=" rounded-2 animation" src={props.img} />
       <Card.Body className="p-0 mb-2 d-flex justify-content-between">
         <Card.Text className="p-0 small-text">{props.text}</Card.Text>
         {props.explicit && (

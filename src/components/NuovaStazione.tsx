@@ -15,7 +15,11 @@ const NuovaStazione = (props: NuovaStazioneProps) => {
           </Card.Text>
           <Card.Text className="p-0">{props.text}</Card.Text>
         </Card.Body>
-        <Card.Img className=" rounded-2" src={props.img} />
+        <Card.Img
+          className=" rounded-2 animation"
+          src={props.img}
+          role="button"
+        />
       </Card>
     </Col>
   )

@@ -10,7 +10,7 @@ const SongCardFetch = ({ music }: SongCardFetchProps) => {
   return (
     <Col xs={4} md={3} lg={2}>
       <Card className="border-0" role="button">
-        <Card.Img className=" rounded-2" src={music.album.cover} />
+        <Card.Img className=" rounded-2 animation" src={music.album.cover} />
         <Card.Body className="p-0 mb-2 d-flex justify-content-between">
           <Card.Text className="p-0 small-text">{music.title_short}</Card.Text>
           {music.explicit_lyrics && (

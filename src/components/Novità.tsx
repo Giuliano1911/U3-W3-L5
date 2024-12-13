@@ -17,11 +17,24 @@ import img6 from '../assets/images/2c.png'
 import img7 from '../assets/images/2d.png'
 import img8 from '../assets/images/2e.png'
 import img9 from '../assets/images/2f.png'
+import Buttons from './Buttons'
 
 const Novità = () => {
   const [music, setMusic] = useState<IData[]>([])
   const [error, setError] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(true)
+
+  const ButtonArray: string[] = [
+    'Esplora per genere',
+    'Decenni',
+    'Attività',
+    'Worldwide',
+    'Classifiche',
+    'Audio spaziale',
+    'Video musicali',
+    'Nuovi artisti',
+    'Hits dal passato',
+  ]
 
   const getSongs = async () => {
     fetch(
@@ -108,6 +121,14 @@ const Novità = () => {
               music.slice(0, 12).map((m) => {
                 return <SongCardFetch key={m.id} music={m} />
               })}
+          </Row>
+          <div className="d-flex mt-5 mb-3">
+            <h5 className="mb-0">Altro da esplorare</h5>
+          </div>
+          <Row>
+            {ButtonArray.map((b, i) => {
+              return <Buttons key={i} text={b} />
+            })}
           </Row>
         </Col>
       </Row>

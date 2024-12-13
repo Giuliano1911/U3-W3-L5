@@ -8,6 +8,7 @@ import Novità from './components/Novità'
 import MyNav from './components/MyNav'
 import SideNav from './components/SideNav'
 import MyFooter from './components/MyFooter'
+import PlayerMobile from './components/PlayerMobile'
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             </Col>
           </Row>
         </main>
+        <PlayerMobile />
       </Container>
     </BrowserRouter>
   )
