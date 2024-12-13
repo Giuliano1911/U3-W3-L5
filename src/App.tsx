@@ -7,6 +7,7 @@ import NotFound from './components/NotFound'
 import Novità from './components/Novità'
 import MyNav from './components/MyNav'
 import SideNav from './components/SideNav'
+import MyFooter from './components/MyFooter'
 
 function App() {
   return (
@@ -23,15 +24,16 @@ function App() {
           <Row className=" justify-content-end">
             <Col
               lg={3}
-              className="d-none d-lg-flex flex-column position-absolute top-0 start-0 bg-dark border-end border-1 border-light page"
+              className="d-none d-lg-flex flex-column position-absolute top-0 start-0 bg-dark border-end border-1 border-light page overflow-auto"
             >
               <SideNav />
             </Col>
-            <Col xs={12} lg={9} className="p-0">
+            <Col xs={12} lg={9} className="p-0 overflow-auto scroll">
               <Routes>
                 <Route path="/" element={<Novità />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
+              <MyFooter />
             </Col>
           </Row>
         </main>

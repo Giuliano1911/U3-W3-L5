@@ -22,7 +22,7 @@ const SideNav = () => {
       <Link
         to={'/'}
         role="button"
-        className="navbar-brand d-flex mx-3 my-1 ps-1"
+        className="navbar-brand d-flex mx-3 mb-1 ps-1 mt-4"
       >
         <i className="fas fa-home text-danger me-2 mt-1"></i>
         <p className="mb-0">Home</p>

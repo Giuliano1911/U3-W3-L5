@@ -1,0 +1,4 @@
+const MyFooter = () => {
+  return <div></div>
+}
+export default MyFooter

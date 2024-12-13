@@ -29,7 +29,7 @@ const MyNav = () => {
             <Link className="nav-link" to={'/'}>
               Home
             </Link>
-            <Link className="nav-link" to={'/'}>
+            <Link className="nav-link active" to={'/'}>
               Novità
             </Link>
             <Link className="nav-link" to={'/'}>
