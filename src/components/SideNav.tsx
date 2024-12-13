@@ -4,7 +4,8 @@ import { InputGroup, Form } from 'react-bootstrap'
 import { useState } from 'react'
 
 interface SideNavProps {
-  setSearch: () => string
+  // Grazie ancora Stefano!!
+  setSearch: React.Dispatch<React.SetStateAction<string>>
 }
 
 const SideNav = ({ setSearch }: SideNavProps) => {

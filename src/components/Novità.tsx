@@ -73,7 +73,7 @@ const Novità = ({ search }: NovitaProps) => {
     <Container fluid>
       <Row className=" justify-content-center">
         <Col xs={11}>
-          <h2 className="mt-5">Novità</h2>
+          <h2 className="mt-5 mb-0">Novità</h2>
           <hr />
           <Row>
             <NuovaStazione

@@ -34,6 +34,7 @@ function App() {
             <Col xs={12} lg={9} className="p-0 overflow-auto scroll">
               <Routes>
                 <Route path="/" element={<Novità search={search} />} />
+                {/* Qui si può aggiungere una nuova pagina */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
               <MyFooter />
